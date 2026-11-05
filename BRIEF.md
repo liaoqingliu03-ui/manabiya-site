@@ -42,3 +42,16 @@
 ## 成果物
 - index.html / style.css（/ script.js）
 - HANDOFF.md：作ったもの、検証結果、判断に迷った点があれば明記
+
+## 追加発注（2026-11-06：検索対策）
+サイトURL: https://liaoqingliu03-ui.github.io/manabiya-site/
+以下を実装し、自己検証して結果を HANDOFF.md に追記すること。ページの見た目と既存の文章は基本変えない。
+1. sitemap.xml を新規作成（トップページ1URLのみ、lastmod は 2026-11-06）。
+2. robots.txt を新規作成（全許可＋sitemapの場所を記載）。
+3. index.html の head に追加：
+   - canonical リンク（上記URL）
+   - OGP（og:title / og:description / og:type=website / og:url）と twitter:card=summary
+   - meta keywords は不要。description は既存のままでよい。
+4. 検索で使われる語（知育プリント・ぬりえ・ひらがな練習・3歳・4歳・5歳・6歳・幼児・おうち学習）を、既存の本文の範囲で自然に確認し、タイトルと見出しに不足があれば最小限だけ補う（キーワードの詰め込み、不自然な繰り返しは禁止）。
+5. 検証：sitemap.xml と robots.txt がローカル配信で 200 で返ること、head の追加タグが入っていること、リンクと個人情報の再チェック（従来分も維持）。
+6. git commit はしない（Sunnyが行う）。
